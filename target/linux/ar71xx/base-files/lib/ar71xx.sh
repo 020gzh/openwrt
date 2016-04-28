@@ -1072,6 +1072,9 @@ ar71xx_board_detect() {
 	*"HiWiFi HC6361")
 		name="hiwifi-hc6361"
 		;;
+	*SOM9331)
+		name="som9331"
+		;;
 	esac
 
 	[ -z "$AR71XX_MODEL" ] && [ "${machine:0:8}" = 'TP-LINK ' ] && \
