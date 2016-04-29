@@ -385,3 +385,13 @@ define Profile/TLWR2543/Description
 	Package set optimized for the TP-LINK TL-WR2543N/ND.
 endef
 $(eval $(call Profile,TLWR2543))
+
+define Profile/SOM9331
+	NAME:=OpenEmbed SOM9331
+	PACKAGES:=kmod-usb-core kmod-usb2
+endef
+
+define Profile/SOM9331/Description
+	Package set optimized for the OpenEmbed SOM9331.
+endef
+$(eval $(call Profile,SOM9331))
