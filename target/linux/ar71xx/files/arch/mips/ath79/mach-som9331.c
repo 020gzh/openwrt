@@ -89,11 +89,11 @@ static void __init som9331_setup(void)
 
 	ath79_setup_ar933x_phy4_switch(true, true);
 
-	ath79_gpio_function_disable(AR933X_GPIO_FUNC_ETH_SWITCH_LED0_EN |
-				    AR933X_GPIO_FUNC_ETH_SWITCH_LED1_EN |
-				    AR933X_GPIO_FUNC_ETH_SWITCH_LED2_EN |
-				    AR933X_GPIO_FUNC_ETH_SWITCH_LED3_EN |
-				    AR933X_GPIO_FUNC_ETH_SWITCH_LED4_EN);
+	//ath79_gpio_function_disable(AR933X_GPIO_FUNC_ETH_SWITCH_LED0_EN |
+	//			    AR933X_GPIO_FUNC_ETH_SWITCH_LED1_EN |
+	//			    AR933X_GPIO_FUNC_ETH_SWITCH_LED2_EN |
+	//			    AR933X_GPIO_FUNC_ETH_SWITCH_LED3_EN |
+	//			    AR933X_GPIO_FUNC_ETH_SWITCH_LED4_EN);
 
 	ath79_register_m25p80(&tl_wr703n_flash_data);
 	ath79_register_leds_gpio(-1, ARRAY_SIZE(tl_wr703n_leds_gpio),

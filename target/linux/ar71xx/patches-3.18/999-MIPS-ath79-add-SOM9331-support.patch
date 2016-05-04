@@ -1,7 +1,7 @@
---- a/arch/mips/ath79/machtypes.h
+-- a/arch/mips/ath79/machtypes.h
 +++ b/arch/mips/ath79/machtypes.h
-@@ -156,6 +156,7 @@
- 	ATH79_MACH_WZR_HP_G450H,	/* Buffalo WZR-HP-G450H */
+@@ -218,6 +218,7 @@
+ 	ATH79_MACH_WZR_450HP2,		/* Buffalo WZR-G450HP2 */
  	ATH79_MACH_ZCN_1523H_2,		/* Zcomax ZCN-1523H-2-xx */
  	ATH79_MACH_ZCN_1523H_5,		/* Zcomax ZCN-1523H-5-xx */
 +	ATH79_MACH_SOM9331,		/* OpenEmbed SOM9331 */
@@ -10,9 +10,9 @@
  #endif /* _ATH79_MACHTYPE_H */
 --- a/arch/mips/ath79/Kconfig
 +++ b/arch/mips/ath79/Kconfig
-@@ -889,6 +889,16 @@
+@@ -1318,6 +1318,16 @@
  	select ATH79_DEV_USB
- 	select ATH79_DEV_WMAC
+ 	select ATH79_NVRAM
  
 +config ATH79_MACH_SOM9331
 +	bool "OpenEmbed SOM9331 support"
@@ -29,8 +29,8 @@
  config SOC_AR71XX
 --- a/arch/mips/ath79/Makefile
 +++ b/arch/mips/ath79/Makefile
-@@ -127,3 +127,4 @@
- obj-$(CONFIG_ATH79_MACH_WZR_HP_G450H)	+= mach-wzr-hp-g450h.o
+@@ -170,3 +170,4 @@
  obj-$(CONFIG_ATH79_MACH_ZCN_1523H)	+= mach-zcn-1523h.o
  obj-$(CONFIG_ATH79_MACH_CARAMBOLA2)	+= mach-carambola2.o
+ obj-$(CONFIG_ATH79_MACH_NBG6716)	+= mach-nbg6716.o
 +obj-$(CONFIG_ATH79_MACH_SOM9331)	+= mach-som9331.o
